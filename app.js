@@ -281,7 +281,7 @@ app.get("/read-code", async (req, res) => {
 
 app.use(express.static("build"));
 app.get("*", (req, res) => {
-  req.sendFile(path.join(__dirname, "build", "index.html"));
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 app.listen(port, () => {
